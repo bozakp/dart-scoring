@@ -26,7 +26,7 @@ public class PlayerScore extends BaseObservable {
                 if (shot == null) { continue; }
                 roundSum += shot;
             }
-            if (roundSum <= score) {
+            if (roundSum >= 0) {
                 score -= roundSum;
             }
         }
