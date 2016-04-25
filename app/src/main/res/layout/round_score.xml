@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="round" type="com.philbozak.dartscoring.RoundScore" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Round: "/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{round.shots.size() > 0 ? String.valueOf(round.shots.get(0)) : ""}'
+            style="@style/NumberFont"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=", "/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{round.shots.size() > 1 ? String.valueOf(round.shots.get(1)) : ""}'
+            style="@style/NumberFont"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=", "/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{round.shots.size() > 2 ? String.valueOf(round.shots.get(2)) : ""}'
+            style="@style/NumberFont"/>
+    </LinearLayout>
+</layout>
